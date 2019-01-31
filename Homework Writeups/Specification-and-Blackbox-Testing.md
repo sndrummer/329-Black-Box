@@ -6,6 +6,15 @@
   * Derive test input using decision tables
   * Write basic black-box test reports
 
+# Class Standards for Black-box testing
+
+* The specification should make clear the requires and ensures for correct output
+* The ensures classes must be checked in any test
+* Invalid input that violates any requires clause should be tested and checked that it throws a `RuntimeException`
+* Ensures only includes something about exceptions if there is a throws-clause with a non-`RuntimeException`.  
+ * Pick a [naming convention](https://dzone.com/articles/7-popular-unit-test-naming) for the tests so that they are self-documenting and be consistent with that convention.
+ * The [IntervalSet](https://bitbucket.org/byucs329/byu-cs-329-lecture-notes/src/master/Set/) is an example of what needs to be done.
+ 
 # Notes and Advice
 
   * Whenever you might have to test several things together, in designing tests you have a choice that must be driven by at least two considerations among others:

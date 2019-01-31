@@ -77,9 +77,9 @@ public class VectorAddTests {
 
     /**
      * Tests the set of invalid input
-     * 1. v1 = null
-     * 2. v2 = null
-     * 3. v1 and v2 = null
+     * 1. a = null
+     * 2. b = null
+     * 3. a and b = null
      */
     @Test
     @DisplayName("Vector Add With Null Input Test")
@@ -89,7 +89,7 @@ public class VectorAddTests {
                     // Test 1
                     Float[] v1 = null;
                     Float[] v2 = new Float[]{1f, 2f, 3f, 4f};
-                    assertThrows(NullPointerException.class, () -> {
+                    assertThrows(RuntimeException.class, () -> {
                         Misc.vectorAdd(v1, v2);
                     });
 
@@ -98,7 +98,7 @@ public class VectorAddTests {
                     // Test 2
                     Float[] v1 = new Float[]{1f, 2f, 3f, 4f};
                     Float[] v2 = null;
-                    assertThrows(NullPointerException.class, () -> {
+                    assertThrows(RuntimeException.class, () -> {
                         Misc.vectorAdd(v1, v2);
                     });
                 },
@@ -106,7 +106,7 @@ public class VectorAddTests {
                     // Test 3
                     Float[] v1 = null;
                     Float[] v2 = null;
-                    assertThrows(NullPointerException.class, () -> {
+                    assertThrows(RuntimeException.class, () -> {
                         Misc.vectorAdd(v1, v2);
                     });
                 }
