@@ -1,0 +1,4 @@
+//TODO ADD THESE TO THE GIT
+
+1. Pom file check that it works in eclipse
+2. All the misc files from src and test
