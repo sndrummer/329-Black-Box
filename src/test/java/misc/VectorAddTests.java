@@ -28,7 +28,6 @@ public class VectorAddTests {
      */
     @Test
     @DisplayName("Vector Add Equal Lengths Test")
-    @Tag("Lengths Test")
     public void testVectorAddEqualLengths() {
 
         // Test 1, length of 'a' equals length of 'b'
@@ -46,15 +45,15 @@ public class VectorAddTests {
      *
      * According to the spec and the definition of vector addition, using different lengths if vectors
      * should throw a runtime exception, if it does not that could be a problem
+     *
+     * Test Fails because Test1 does not throw an exception, this means that vectorAdd does allow vectors
+     * of different lengths as long as b > a, which is not what is expected given how the mathematical
+     * definition of vector addition
      */
     @Test
     @DisplayName("Vector Add Different Lengths Test")
-    @Tag("Lengths Test")
     public void testVectorAddDifferentLengths() {
         assertAll(
-                () -> {
-
-                },
                 () -> {
                     // Test 1, length of b > length of a
                     Float[] a = new Float[]{1f, 2f, 3f, 4f};
@@ -76,7 +75,7 @@ public class VectorAddTests {
 
 
     /**
-     * Tests the set of invalid input
+     * Tests the set of invalid null input
      * 1. a = null
      * 2. b = null
      * 3. a and b = null
@@ -112,5 +111,4 @@ public class VectorAddTests {
                 }
         );
     }
-
 }

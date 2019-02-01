@@ -12,12 +12,12 @@ public class Misc {
     /**
      * Creates a new array with the reverse order of the input array
      *
+     * @param a array to reverse
+     * @return new array where the order of its elements is the reverse of array a.
+     * <p>
+     * a is null or empty then an empty array is returned
      * @cs329.requires none
      * @cs329.ensures that a new array is returned with the elements of a but in reverse order, if
-     * a is null or empty then an empty array is returned
-     *
-     * @param a array to reverse
-     * @return  new array where the order of its elements is the reverse of array a.
      */
     public static Object[] reverse(Object[] a) {
         if (a == null) {
@@ -35,12 +35,11 @@ public class Misc {
     /**
      * Computes the vector addition of parameters a and b
      *
+     * @param a float array that represents a vector, also represents the result of the addition when returning
+     * @param b float array that represents a vector, will be added to vector a
      * @cs329.requires that a and b are non-null, and that length of a is equal to the length of b
      * (according to the definition of vector addition given by linear algebra).
      * @cs329.ensures that input vector 'a' will be the result of a + b vector addition.
-     *
-     * @param a float array that represents a vector, also represents the result of the addition when returning
-     * @param b float array that represents a vector, will be added to vector a
      */
     public static void vectorAdd(Float[] a, Float[] b) {
         for (int i = 0; i < a.length; i++) {
@@ -91,8 +90,7 @@ public class Misc {
             } else {
                 if (arr[b] == 2) {
                     b = b + 1;
-                }
-                else // arr[b] should be 3 here
+                } else // arr[b] should be 3 here
                 {
                     c = c - 1;
                     arr[b] = arr[c];
