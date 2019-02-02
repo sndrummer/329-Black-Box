@@ -2,3 +2,4 @@
 
 1. Pom file check that it works in eclipse
 2. All the misc files from src and test
+3. Add THE .classpath!!!! hopefully it works without going insane

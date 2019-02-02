@@ -52,8 +52,11 @@ public class Misc {
      *
      * @param x   element to add
      * @param arr array to which x is added
-     * @cs329.requires x and arr are non-null and there is an element in arr that is null
-     * @cs329.ensures when f returns to the caller there is an element in arr that is equal to x
+     * @cs329.requires x and arr are non-null, and if arr does not have any instances of x then arr must
+     * have a null element
+     * @cs329.ensures x will replace the first null element of arr as an element unless arr already contains
+     * an object equal to x
+     *
      */
     public static void f(Object x, Object[] arr) {
         int i;
@@ -76,6 +79,15 @@ public class Misc {
         } // C2
     }
 
+    /**
+     * Sort arrays arr of integers coming from the set {1,2,3} in linear time.
+     *
+     * @cs329.requires arr must consist of integers from the set {1,2,3}
+     * @cs329.ensures when dnfsort returns arr is now sorted such that all 1's, if any, are before 2's,
+     * all 2's if any are before 3's, and all 3's appear last or in RegEx terms we have: {1* 2* 3*}
+     *
+     * @param arr an array of ints 1,2, and 3
+     */
     public static void dnfsort(int[] arr) {
         int a = 0;
         int b = 0;
