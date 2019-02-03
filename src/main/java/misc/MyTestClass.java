@@ -15,6 +15,15 @@ public class MyTestClass {
 
     public static void main(String[] args) {
 
+        WorkSchedule testSchedule = new WorkSchedule(4);
+        testSchedule.setRequiredNumber(1, 1, 3);
+        for (int i = 0; i < 4; i++) {
+            WorkSchedule.Hour hour = testSchedule.readSchedule(i);
+            log.debug("HOUR REQ {}", hour.requiredNumber);
+
+        }
+
+
 
 
     /*    Object x = 3;
@@ -23,9 +32,6 @@ public class MyTestClass {
 
         Misc.f(x, arr);*/
 
-        WorkSchedule w = new WorkSchedule(5);
-        WorkSchedule.Hour s = w.readSchedule(1);
-        log.debug("HOUR {}", s.workingEmployees.length);
 
 
 
